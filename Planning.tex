@@ -1,0 +1,31 @@
+\section{Planning}
+% Divide the work to be done in work packages / tasks (not more than 10) and describe them accurately as well as their links to each other.
+
+% Identify risks and discuss a plan B if your initial plan fails (for instance, if required data / instruments are not available in due time).
+
+% Include your GANTT chart in the appendix.
+
+% Your schedule of work must include key review points (start of project, mid-term, green light, etc.). Be mindful that your planning is realistic and motivated. Remember holidays, breaks, delays and that some tasks will be concurrent and running in parallel. If you can only work par-time during (part) of the project, this should be clear from the schedule.
+The following phases, each consisting of sub-tasks, are identified based on the methodology described in section \ref{methodologies} and will support achieving the objectives described in section \ref{research questions}. In addition, the planning includes important dates such as the midterm, meetings and communication with supervisors, and the presentation of the results. The research project can be divided into the following phases:
+
+\begin{enumerate}
+    \item Researching background information and investigating the topic
+    \item Data and model preparation
+    \item Model development
+    \item Model training and evaluation
+\end{enumerate}
+
+\subsection{Researching Background Information and Investigating the Topic}
+First, gaining a deeper understanding of the problem and all the relevant background information is needed to identify the knowledge gaps and required work for this research. For the writer, this process consists of reading up on the working dynamics of glaciers, temperature-index models, measuring techniques, and state-of-the-art machine-learning models for predicting glacier mass balance, including talking and discussing the topic with the supervisors. In addition, the writer needs to gain insights into Sjursen's (2024, personal communication) model and data, as it will be the starting point of this research project.
+
+\subsection{Data and Model Preparation}
+Second, Sjursen's (2024, personal communication) model will be isolated, and the code will be refactored to work in a standalone environment and allow the model to be adapted later in the process. Furthermore, an area of interest must be chosen for which mass balance stake data, ERA5-Land, and topographical data will be retrieved. It helps if the data is analysed and graphed to gain knowledge about it that can explain particular behaviours of the model later in the process. 
+
+\subsection{Model Development}
+The third and most essential part of this research project is adapting the architecture of the pre-trained models to make them compatible with transfer learning. The pre-trained model must be enhanced for parameter tuning and feature engineering to allow the model to be retrained for the new dataset. Part of this phase will be the parameter tuning and feature engineering. It is still unclear what method will be used for transfer learning. The best way to tailor the model to the new dataset will be further investigated depending on the chosen technique. 
+
+\subsection{Model Training and Evaluation}
+Fourth, once the adapted model runs, it can be evaluated for its performance, e.g., how well it can predict the glacier mass balance in the area of interest. In addition, the model will be benchmarked against established large-scale models. Following this, the model's performance can be evaluated based on the provided data to get insights into what features are deemed relevant for predicting glacier mass balance and which are not. This will be helpful for future work if the model is adapted for other regions.
+
+\subsection{Gantt Chart}
+The Gantt chart for this project can be found here: \url{https://github.com/users/JulianBiesheuvel/projects/1/views/1}. An estimated time is assigned for each task described above. Key review points include the midterm meeting, green-light meeting, and thesis defence. The exact time estimate and dates are subject to change. Weekly Zoom meetings will be planned with the external supervisors. Daily communication will be done via Slack. There will be bi-weekly meetings with the first supervisor to discuss the progress of the research. If there are any obstructions or the initial plan is subject to failure, alternatives and solutions will be discussed with the (external) supervisors. This thesis project will be combined with part-time work. Therefore, the thesis will take twice as long, e.g., ten months, instead of usual five.

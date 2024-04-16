@@ -1,0 +1,143 @@
+\documentclass{article}
+
+% packages 
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{graphicx} %import images 
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{float} % float positions, pic
+\usepackage{enumitem}
+% header and footer stuff
+\usepackage{fancyhdr}
+\usepackage{tikz,lipsum,lmodern}
+\pagestyle{fancy}
+% paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+%poging
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{titling} 
+\bibliographystyle{apalike}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\addbibresource{biblio.bib}
+% \usepackage{biblatex}
+
+\usepackage{changes}
+\usepackage{amsmath,amssymb,mathtools}
+
+\newcommand{\trace}[1]{\mathrm{Tr}({#1})}
+\newcommand{\tracel}[1]{\mathrm{trace}({#1})}
+\newcommand{\tp}{^{\mathsf{T}}}
+\newcommand{\PP}{\mathsf{P}}
+\newcommand{\C}{\mathsf{C}}
+\newcommand{\E}{\mathsf{E}}
+\newcommand{\D}{\mathsf{D}}
+\newcommand{\N}{\mathsf{N}}
+\newcommand{\rank}[1]{\mathrm{rank}({#1})}
+\newcommand{\var}[1]{\mathrm{var}({#1})}
+\newcommand{\cov}[1]{\mathrm{cov}[{#1}]}
+\newcommand{\vt}[1]{\mathrm{#1}}
+\newcommand\tab[1][0.8cm]{\hspace*{#1}}
+\newcommand{\bfitDelta}{\bm{\mathit{\Delta}}}
+
+%Matlab
+\usepackage{listings}
+\usepackage{xcolor}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  language=python,
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+
+
+\pagenumbering{arabic}
+%START OF DOCUMENT
+
+\begin{document}
+
+\thispagestyle{empty}
+\subsubsection*{Note to the Reader}
+This document contains a very premature and superficial version of my Introduction that will be part of my final report. If you are only interested in the Thesis Proposal, please skip to section \ref{proposed project}. Section \ref{glacier mass balance} is part of the Introduction and the Thesis Proposal but is still very much a work in progress, and many additions still need to be made.
+\newpage
+
+\usetikzlibrary{positioning}
+\tikzset{every picture/.style={line width=0.75pt}}    
+\pagestyle{plain}
+\begin{flushleft}
+\textbf{Thesis Proposal}, as part of the Thesis Preparation (AESM6000)\\
+\vspace{0.2cm}
+By Julian P. Biesheuvel, (4550188), \today
+
+\end{flushleft}
+
+\begin{flushright}\vspace{-20mm}
+\includegraphics[height=1.5cm]{Images/TUDELFT_LOGO.png}
+\end{flushright}
+\vspace{-3mm}
+\rule{\linewidth}{0.1mm}
+
+% \section*{Mass Balance Machine: A Minimal Machine Learning Model for Global Glacier Mass Balance Modelling}
+\section*{Mass Balance Machine: A Minimal Machine Learning Model for Glacier Mass Balance Modelling} %in Iceland
+
+\begin{flalign*}
+    &\text{\textbf{Student}}           &&: \quad 
+    \text{J.P. (Julian) Biesheuvel}^1 & \\
+    &\text{\textbf{Main supervisor}}           &&: \quad 
+    \text{Dr. Ir. B. (Bert) Wouters}^1 & \\
+    &\text{\textbf{Secondary supervisor}}      &&: \quad 
+    \text{Dr. Ir. D.B.T. (Taco) Broerse}^1 & \\
+    &\text{\textbf{External supervisor 1}}      &&: \quad 
+    \text{Dr. J. (Jordi) Bolibar}^{1, 2} & \\
+    & \text{\textbf{External supervisor 2}}      &&: \quad 
+    \text{PhD Candidate K. (Kamilla) Hauknes Sjursen}^3& 
+\end{flalign*}
+{\footnotesize
+\textbf{1}: Delft University of Technology, 
+\textbf{2}: IGU, Université Grenoble Alpes, 
+\textbf{3}: Western Norway University of Applied Sciences - HVL
+}
+
+\input{Intro}
+\clearpage
+\input{RQ}
+\input{Methods}
+\clearpage
+\input{Planning}
+\clearpage
+\input{Reflection}
+\clearpage
+
+\printbibliography
+
+\end{document}
+
+
